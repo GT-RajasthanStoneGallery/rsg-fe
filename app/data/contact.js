@@ -4,7 +4,7 @@
 export const CONTACT_INFO = {
   phones: ["+91-9111-9977-54", "+91-9983-3911-37"],
   emails: ["rajasthanstone13@gmail.com", "Businesswithluckymarble@gmail.com"],
-  whatsappPhone: "9983391137",
+  whatsappPhone: "9111997754",
   address: "Rajasthan Stone Gallery Pvt. Ltd. G-286, RIICO Area, Rajsamand, Nogama, Rajasthan 313342",
   address2: "Rajasthan Stone Gallery Pvt. Ltd. Pharara, Rajasthan 313324",
   locationLinks: [

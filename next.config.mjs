@@ -1,5 +1,17 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Pin the Turbopack workspace root to the parent directory. Setting it to
+  // the project dir itself triggers a Next 16 bug where the relative path to
+  // globals.css becomes "../app/globals.css", making `@import "tailwindcss"`
+  // resolve from the parent (which has no node_modules). See vercel/next.js#92978.
+  turbopack: {
+    root: path.join(__dirname, ".."),
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com", port: "", pathname: "/**", search: "" },
